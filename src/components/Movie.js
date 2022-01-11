@@ -9,13 +9,12 @@ function Movie({ id, coverImage, title, summary, genres }) {
         <Link to={`/movie/${id}`}>{title}</Link>
       </h2>
       <p style={{ color: "khaki" }}>{summary}</p>
-      {console.log(Boolean(genres))}
       <ul>
         {genres
           ? genres.map((g) => {
-              <li key={g}>{g}</li>;
+              return <li key={g}>{g}</li>;
             })
-          : null}
+          : "???"}
       </ul>
     </div>
   );
